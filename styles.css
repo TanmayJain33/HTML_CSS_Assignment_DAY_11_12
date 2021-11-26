@@ -1,0 +1,278 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background-color: #ffffff;
+  color: rgb(28, 38, 50);
+  font-size: 16px;
+  line-height: 1.5;
+}
+a {
+  color: #999999;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+.container {
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Navigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 1.25rem 0;
+  font-size: 0.875rem;
+}
+.main-nav .main-logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.main-nav .main-logo p {
+  margin-left: 0.5rem;
+  font-weight: 700;
+}
+.main-nav img {
+  width: 25px;
+}
+.main-nav .main-menu {
+  display: flex;
+}
+.main-nav .main-menu li {
+  font-weight: 700;
+  padding: 0 1.25rem;
+}
+.main-menu li a:hover {
+  border-bottom: 1px solid #999999;
+}
+
+/* Heading */
+.heading {
+  width: 60%;
+  font-weight: 400;
+  font-size: 4rem;
+  margin-top: 5rem;
+}
+.heading img {
+  width: 3rem;
+}
+/* Section 1 */
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+.buttons button:first-child {
+  color: #ffffff;
+  font-weight: 700;
+  background-color: rgb(28, 38, 50);
+  border: 0;
+  padding: 0.8rem 1.25rem;
+  border-radius: 2rem;
+}
+.buttons button:last-child {
+  color: rgb(28, 38, 50);
+  font-weight: 700;
+  background-color: #d5d5d5;
+  border: 0;
+  padding: 0.8rem 1.25rem;
+  margin-left: 0.5rem;
+  border-radius: 2rem;
+}
+.text {
+  display: flex;
+  align-items: center;
+}
+.text p {
+  font-size: 0.7rem;
+  color: #999999;
+  font-weight: 700;
+  margin-right: 1.2rem;
+}
+.text p:last-child {
+  margin-right: 0;
+}
+
+/* Section 2 */
+.section2 {
+  position: relative;
+  background-color: rgb(28, 38, 50);
+  margin-top: 6rem;
+}
+.section2 .container {
+  padding-top: 4rem;
+}
+.section2 .box {
+  display: flex;
+  justify-content: space-between;
+}
+.section2 .box .founder {
+  width: 50%;
+  order: -1;
+  color: #ffffff;
+}
+.section2 .box .founder-info {
+  display: flex;
+  align-items: center;
+}
+.section2 .box .founder-info img {
+  width: 2rem;
+  border-radius: 50%;
+}
+.section2 .box .founder-info div {
+  margin-left: 0.8rem;
+}
+.section2 .box .founder-info div p {
+  font-size: 0.6rem;
+}
+.section2 .box .image img {
+  position: absolute;
+  top: 8rem;
+  width: 25%;
+  min-width: 200px;
+}
+.section2 .box .content {
+  width: 50%;
+}
+.section2 .content {
+  color: #ffffff;
+}
+.section2 .box .content h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+.section2 .box .content p {
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
+.section2 .box .content button {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  color: rgb(28, 38, 50);
+  font-weight: 700;
+  background-color: #ffffff;
+  border: 0;
+  padding: 0.8rem 1.5rem;
+  border-radius: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .heading {
+    width: 80%;
+  }
+}
+@media (max-width: 1000px) {
+  .heading {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .heading {
+    font-size: 3rem;
+  }
+  .heading img {
+    width: 2rem;
+  }
+  .menu-btn:hover {
+    opacity: 0.5;
+  }
+  .menu-right .menu-btn {
+    cursor: pointer;
+  }
+  .main-nav .main-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #f2f2f2;
+    width: 50%;
+    height: 100%;
+    border-right: 1px solid #cccccc;
+    opacity: 0.9;
+    padding: 1.875rem;
+    transform: translateX(-500px);
+    transition: transform 0.2s ease-in-out;
+  }
+  .main-nav .main-menu li {
+    padding: 0.625rem;
+    border-bottom: 1px solid #cccccc;
+    font-size: 1rem;
+  }
+  .main-nav .main-menu li:last-child {
+    border-bottom: 0;
+  }
+  .main-nav .main-menu li a {
+    color: #000000;
+  }
+  .main-nav .show {
+    transform: translateX(-20px);
+  }
+}
+@media (max-width: 650px) {
+  .container {
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .heading {
+    margin-top: 2rem;
+    font-size: 2.5rem;
+  }
+  .section1 {
+    display: block;
+  }
+  .section1 .buttons {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .text {
+    margin-top: 2.5rem;
+  }
+  .section2 {
+    margin-top: 2.5rem;
+  }
+  .section2 .container {
+    padding-top: 1.5rem;
+  }
+  .section2 .box {
+    display: block;
+  }
+  .section2 .box .founder,
+  .section2 .box .content {
+    width: 100%;
+  }
+  .section2 .box .content button {
+    display: block;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .section2 .box .founder-info {
+    padding-bottom: 10rem;
+  }
+  .section2 .box .founder-info img {
+    width: 3rem;
+  }
+  .section2 .box .founder-info div h5 {
+    font-size: 1rem;
+  }
+  .section2 .box .founder-info div p {
+    font-size: 0.7rem;
+  }
+  .section2 .box .image img {
+    top: 30rem;
+    left: 25%;
+    width: 50%;
+  }
+}
